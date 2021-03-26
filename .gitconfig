@@ -1,0 +1,20 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	name = TheTenzou
+	email = 61962705+TheTenzou@users.noreply.github.com
+[core]
+	autocrlf = true
+	safecrlf = warn
+	quotepath = off
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	all = add .
+[aliase]
+	ci = commit

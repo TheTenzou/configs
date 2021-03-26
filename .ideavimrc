@@ -1,0 +1,145 @@
+set relativenumber
+set number
+set commentary
+
+set keep-english-in-normal-and-restore-in-insert
+set surround
+
+nnoremap gd :action GotoDeclaration<cr>
+
+let mapleader = " "
+
+inoremap <a-j> <down>
+inoremap <a-k> <up>
+nnoremap <a-j> <down>
+nnoremap <a-k> <up>
+vnoremap <a-j> <down>
+vnoremap <a-k> <up>
+"inoremap <a-h> <left>
+"inoremap <a-l> <right
+
+map <leader>e $
+map <leader>b ^
+map <leader>o o<esc>k^
+map <leader>O O<esc>j^
+
+map <leader>f :action GotoFile<cr>
+
+" move between tabs
+nmap <a-l> :action NextTab<cr>
+nmap <a-h> :action PreviousTab<cr>
+
+" moving between windows
+nmap <leader>h <c-w>h
+nmap <leader>l <c-w>l
+nmap <leader>k <c-w>k
+nmap <leader>j <c-w>j
+
+" Closing tabs
+nmap <leader>q :action CloseContent<cr>
+nmap <leader>Q :action ReopenClosedTab<cr>
+
+" To navigate between split panes
+nmap <leader>wl :action NextSplitter<cr>
+nmap <leader>wj :action PrevSplitter<cr>
+
+" Splits manipulation
+nmap <leader>wh :action SplitHorizontally<cr>
+nmap <leader>wv :action SplitVertically<cr>
+nmap <leader>wc :action Unsplit<cr>
+nmap <leader>wC :action UnsplitAll<cr>
+nmap <leader>wd :action OpenEditorInOppositeTabGroup<cr>
+nmap <leader><leader> :action VimFilePrevious<cr>
+
+" Refactorings
+vmap T :action Refactorings.QuickListPopupAction<cr>
+nmap <leader>rr :action RenameElement<cr>
+nmap <leader>rg :action Generate<cr>
+nmap <leader>rI :action OptimizeImports<cr>
+nmap <leader>a :action ShowContent<cr>
+" Inspection
+nmap <leader>rc :action InspectCode<cr>
+
+" Search
+nmap <leader>/ :action Find<cr>
+nmap <leader>\ :action FindInPath<cr>
+
+" Moving lines
+nmap [e :action MoveLineUp<cr>
+nmap ]e :action MoveLineDown<cr>
+" Moving statements
+nmap [s :action MoveStatementUp<cr>
+nmap ]s :action MoveStatementDown<cr>
+
+
+" now ideaVimExtension works it no more needs
+" save just in case
+"map й q
+"map ц w
+"map у e
+"map к r
+"map е t
+"map н y
+"map нн yy
+"map г u
+"map ш i
+"map щ o
+"map з p
+"map х [
+"map ъ ]
+"map ф a
+"map ы s
+"map в d
+"map вв dd
+"map а f
+"map п g
+"map пп gg
+"map р h
+"map о j
+"map л k
+"map д l
+"map ж ;
+"map э '
+"map я z
+"map яя zz
+"map ч x
+"map с c
+"map м v
+"map и b
+"map т n
+"map ь m
+"map б ,
+"map ю .
+
+"map Й Q
+"map Ц W
+"map У E
+"map К R
+"map Е T
+"map Н Y
+"map Г U
+"map Ш I
+"map Щ O
+"map З P
+"map Х {
+"map Ъ }
+"map Ф A
+"map Ы S
+"map В D
+"map А F
+"map П G
+"map Р H
+"map О J
+"map Л K
+"map Д L
+"map Ж :
+"map Э "
+"map Я Z
+"map Ч X
+"map С C
+"map М V
+"map И B
+"map Т N
+"map Ь M
+"map Б <
+"map Ю >
